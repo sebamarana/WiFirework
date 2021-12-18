@@ -1,5 +1,5 @@
 # WiFirework
-Arduino code and steps on how to build a Wireless Firework Igniter with an EPS8266
+Arduino code and steps on how to build a Wireless Firework Igniter with an ESP8266
 
 Ok, so if you have come here to search for a way not to hurt yourself or have nothing to do with flames while igniting a firework or a firecracker, you found the right page.
 
@@ -29,14 +29,22 @@ The project is simple, we will just setup an Access Point from the ESP8266 where
 
 1. Connect the ESP8266 on the breadboard, make it fit so you can connect the 3 V volt port.
 2. Use the breadboard cables to connect the 3V and the Ground pins to the correspective pins on the Relay.
-3. Connect you output pin from the EPS8266 (In my case i connected the 7) from the breadboard to the Relay signal pin.
+3. Connect you output pin from the EPS8266 (In my case i connected the D7) from the breadboard to the Relay signal pin.
+
+![alt text](https://i.postimg.cc/T1J30C7B/IMG-1298.jpg)
+
 4. Then on the Relay connect 2 breadboard cables, one in the center one on the NO gate, as shown in the diagram.
+
+![alt text](https://i.postimg.cc/5yVt8Z3w/IMG-1299.jpg)
+
 5. Next, get three Alligator clamps:
      - One goes from the battery positive to the cable in the middle of the relay.
      - One goes on the other cable of the relay.
      - the last one goes on the negative of the battery.
 6. Use the electrical tape to secure the cables, and the Alligator clamps on the battery (Make sure they don't touch each other!)
 7. Connect a tiny bit of nichrome wire 5/10 cm to the negative alligator clamp and the other side to the positive coming from the relay.
+
+![alt text](https://i.postimg.cc/vHGBTwDy/IMG-1300.png)
 
 ## Now everything is ready, but how do you activate it?
 
