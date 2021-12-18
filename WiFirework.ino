@@ -11,7 +11,7 @@ const char MAIN_page[] PROGMEM = R"=====(
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Esplosivo</title>
+      <title>WiFirework</title>
       <style>
         html, body {
             width: 100%;
@@ -90,7 +90,7 @@ const char MAIN_page[] PROGMEM = R"=====(
       </div>
     </center>
     <div class="detonateButtonDiv">
-        <a href="ledOn" class="aButton"><button class="detonateButton">DETONATE!</button></a>
+        <a href="detonation" class="aButton"><button class="detonateButton">DETONATE!</button></a>
     </div>
   </body>
 </html>
@@ -103,7 +103,7 @@ const char DETONATION_page[] PROGMEM = R"=====(
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Esplosivo</title>
+      <title>WiFirework</title>
       <style>
         html, body {
           width: 100%;
@@ -208,20 +208,6 @@ void handleRoot() {
  server.send(200, "text/html", s); //Send web page
 }
 
-void handleLEDon() { 
- Serial.begin(115200);
- Serial.println("PIN on");
- digitalWrite(PIN,LOW); //LED is connected in reverse
- server.send(200, "text/html", "LED is ON"); //Send ADC value only to client ajax request
-}
-
-void handleLEDoff() {
- Serial.begin(115200); 
- Serial.println("PIN off");
- digitalWrite(PIN,HIGH); //LED off
- server.send(200, "text/html", "LED is OFF"); //Send ADC value only to client ajax request
-}
-
 void handleDetonation() {
  Serial.begin(115200); 
  String d = DETONATION_page;
@@ -247,8 +233,6 @@ void setup(void){
   digitalWrite(PIN,HIGH); //Da modificare se non si vuole farsi saltare in aria
  
   server.on("/", handleRoot);      //Which routine to handle at root location. This is display page
-  server.on("/ledOn", handleLEDon); //as Per  <a href="ledOn">, Subroutine to be called
-  server.on("/ledOff", handleLEDoff);
   server.on("/detonation", handleDetonation);
 
   server.begin();                  //Start server
