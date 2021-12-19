@@ -52,7 +52,7 @@ Worry not, if you have already compiled and wrote the code in the ESP8266 now yo
 - Plug it to your powerbank.
 - Check for the WiFirework connection on your phone or laptop, connect to it and insert the password: "ILoveFireworks".
 - Go to your browser while connected to the wifi and search for this ip: "192.168.4.1".
-- Now you can activate it whenever you want! Have fun!
+- Now you can activate it (and wait for it to heat up) and then turn it off whenever you want.
 
 # __**Warnings**__
 
@@ -60,3 +60,4 @@ Worry not, if you have already compiled and wrote the code in the ESP8266 now yo
 - After activating it, you should always wait at least a pair of minutes for the wire to cool off, you don't want it to set off your firework while you are setting it up (If you are still unsure you can always change the wire).
 - If you also do worry about your cables and circuit you can also buy a little box like mine to protect everything from explosions or sparks.
 - Always test everything outside, we don't want to burn down our house ~~right?~~.
+- Remember to always have a spare 9V battery just in case.
